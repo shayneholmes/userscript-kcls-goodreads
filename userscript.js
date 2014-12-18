@@ -11,6 +11,8 @@
 // @grant none
 // ==/UserScript==
 
+this.$ = this.jQuery = jQuery.noConflict(true);
+
 $("th.title").after(function(){ return $(this).clone().removeClass('title').addClass('kcls').html('<div style="margin: auto 10px;">kcls</div>');});
 
 waitForKeyElements ("td.field.title", addkclslinks);
