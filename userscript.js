@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name       Add KCLS links to Goodreads
 // @namespace  http://use.i.E.your.homepage/
-// @version    1.01
+// @version    1.02
 // @description  Puts links in Goodreads lists that go directly to a search at the King County Library System
 // @match      https://www.goodreads.com/review/list/*
 // @copyright  2014, Shayne Holmes
 // @require       http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
 // @require https://greasyfork.org/scripts/2199-waitforkeyelements/code/waitForKeyElements.js?version=6349
 // @author Shayne Holmes
+// @grant none
 // ==/UserScript==
 
 $("th.title").after(function(){ return $(this).clone().removeClass('title').addClass('kcls').html('<div style="margin: auto 10px;">kcls</div>');});
